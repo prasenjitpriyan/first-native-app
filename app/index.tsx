@@ -1,17 +1,22 @@
-import { StyleSheet, View, Text } from 'react-native'
+import LittleLemonFooter from '@/components/LittleLemonFooter'
+import LittleLemonHeader from '@/components/LittleLemonHeader'
+import * as React from 'react'
+import { View } from 'react-native'
 
-export default function HomeScreen() {
+export default function App() {
   return (
-    <View>
-      <Text style={styles.text}>Little Lemon Restaurant</Text>
-    </View>
+    <>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#495E57'
+        }}
+      >
+        <LittleLemonHeader />
+      </View>
+      <View style={{ backgroundColor: '#495E57' }}>
+        <LittleLemonFooter />
+      </View>
+    </>
   )
 }
-
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333'
-  }
-})
